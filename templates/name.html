@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <a href = "/">назад</a>
+  <form action="{{ url_for('hi') }}" method="post">
+    <input type="text" name="name" placeholder="Enter your name">
+    <input type="text" name="email" placeholder="Enter your email">
+    <input type="submit" value="Send">
+  </form>
+{% endblock %}

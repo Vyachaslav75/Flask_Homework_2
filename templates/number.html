@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href = "/">назад</a>
+  <form action="{{ url_for('calc') }}" method="post">
+    <input type="text" name="number" placeholder="Enter your number">
+    <input type="submit" value="Calc">
+  </form>
+{% endblock %}
