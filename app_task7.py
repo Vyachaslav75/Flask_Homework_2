@@ -36,14 +36,9 @@ def hi():
 
 @app.route('/delete_cookie/')
 def delete_cookie():
-    print('DELETE')
     res = make_response("Cookie Removed")
-    name = request.form.get('name')
-    email = request.form.get('email')
-    print(name, email)
-    res.set_cookie('name', 'SFSDs', max_age=0)
-    res.set_cookie('email', email, max_age=0)
-    
+    res.delete_cookie('name')
+    res.set_cookie('email')
     return res
 
 
